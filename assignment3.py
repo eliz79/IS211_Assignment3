@@ -2,25 +2,20 @@
 # -*- coding: utf-8 -*-
 """Text Processing"""
 
-#Erica Liz
+#__author__ = 'Erica Liz'
 
 import urllib2
 
 
-url = 'https://s3.amazonaws.com/cuny-is211-spring2015/birthdays100.csv'
-get_file = urllib2.Request(url)
-response = urllib2.urlopen(get_file)
-html = response.read()
-print html
+def downloadData(url):
+    url = 'http://s3.amazonaws.com/cuny-is211-spring2015/weblog.csv'
+    get_file = urllib2.Request(url)
+    response = urllib2.urlopen(get_file)
+    html = response.read()
+    print html
 
 
-
-
-
-
-
-
-
-
-#url to use - 'http://s3.amazonaws.com/cuny- is211-spring2015/weblog.csv'
+                
+if __name__ == "__main__":
+    url = 'http://s3.amazonaws.com/cuny-is211-spring2015/weblog.csv'
     
