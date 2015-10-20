@@ -28,11 +28,10 @@ def main():
 
 def downloadData(url):
     """Function to fetch data file."""
+    response = urllib2.urlopen(url) #opens file
+    html = response.read() #reads file data
+    return html #returns file data 
     
-    get_file = urllib2.Request(url)
-    response = urllib2.urlopen(get_file) #opens csv file
-    html = response.read() #reads the csv file
-    print html #prints the file contents
 
 def imageSearch(url):
     """Function to retrieve image percentage in file."""
@@ -69,5 +68,6 @@ def browserSearch(url):
                 
 if __name__ == "__main__":
     #url = 'http://s3.amazonaws.com/cuny-is211-spring2015/weblog.csv'
+    
     main()
     
